@@ -1,5 +1,5 @@
 
-FROM maven:3.6.3-jdk-8 AS build
+FROM arm64v8/maven:3.6.3-jdk-8 AS build
 
 MAINTAINER mjj
 
@@ -13,7 +13,7 @@ RUN git clone https://github.com/6mb/Microsoft-365-Admin.git \
     && mvn package -Dmaven.test.skip=true
 
 # microsoft
-FROM logr/8-jre-alpine
+FROM arm64v8/openjdk/20-ea-24-jdk-oraclelinux8
 COPY --from=build /src/Microsoft-365-Admin/target/microsoft-365-admin-*-RELEASE.jar .
 RUN mv microsoft-365-admin-*-RELEASE.jar microsoft.jar
 
