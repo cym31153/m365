@@ -12,6 +12,6 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           # 下方的name格式为：Docker Hub ID/自定义镜像名称
-          name: cymx/kx
+          name: cymx/m365
           username: '${{ secrets.DOCKER_USERNAME }}'
           password: '${{ secrets.DOCKER_PASSWORD }}'
