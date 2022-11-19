@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Building Docker Image
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@4
         with:
           # 下方的name格式为：Docker Hub ID/自定义镜像名称
           name: cymx/m365
